@@ -8,6 +8,7 @@ class DevicesController < ApplicationController
   end
 
   def new
+    @device = Device.create!
   end
 
   def create
