@@ -11,10 +11,6 @@ class DevicesController < ApplicationController
     @device = Device.create!
   end
 
-  def create
-    @device = Device.create!
-  end
-
   def edit
     @device = Device.find!(params[:id])
   end
