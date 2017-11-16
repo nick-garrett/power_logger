@@ -1,0 +1,3 @@
+<p>State: </p>
+<div> <%= @device.state %> </div>
+<%= link_to("Toggle state", { :controller => :devices, :action => :toggle_state }, :method => :post, :remote => true) %>
