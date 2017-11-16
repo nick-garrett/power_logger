@@ -3,7 +3,7 @@ class ReadingsController < ApplicationController
     readings = params[:readings]
     device = Device.find(params[:device_id])
     readings.each do |r|
-      Reading.create!(:device => device, :usage => usage)
+      Reading.create!(:device => device, :usage => r)
     end
     head :ok
   end
