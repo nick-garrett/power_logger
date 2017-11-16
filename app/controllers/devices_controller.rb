@@ -1,0 +1,31 @@
+class DevicesController < ApplicationController
+  def index
+    @devices = Device.all
+  end
+
+  def show
+    @device = Device.find!(params[:id])
+  end
+
+  def new
+  end
+
+  def create
+    @device = Device.create!
+  end
+
+  def edit
+    @device = Device.find!(params[:id])
+  end
+
+  def update
+    @device = Device.find!(params[:id])
+    @device.update_attributes(update_params)
+  end
+
+  private
+
+  def update_params
+    params.require(:device).permit(:state)
+  end
+end
