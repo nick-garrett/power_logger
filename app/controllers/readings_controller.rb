@@ -1,4 +1,6 @@
 class ReadingsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  
   def create
     readings = params[:readings]
     device = Device.find(params[:device_id])
