@@ -9,7 +9,7 @@ class DevicesController < ApplicationController
 
   def new
     @device = Device.create!
-    render :json => @device.id
+    render :json => {:id => @device.id}
   end
 
   def edit
