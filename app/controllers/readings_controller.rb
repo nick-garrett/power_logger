@@ -5,6 +5,7 @@ class ReadingsController < ApplicationController
     readings.each do |r|
       Reading.create!(:device => device, :usage => usage)
     end
+    head :ok
   end
 
   def index
