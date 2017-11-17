@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get '/devices/:id/state', :to => 'devices#state';
   post '/devices/:id/state/toggle', :to => 'devices#toggle_state';
 
-  root :to => redirect('/devices')
+  root :to => redirect('/devices/1')
 end
