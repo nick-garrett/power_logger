@@ -5,6 +5,7 @@ class DevicesController < ApplicationController
 
   def show
     @device = Device.find(params[:id])
+    @readings = @device.readings
   end
 
   def new
