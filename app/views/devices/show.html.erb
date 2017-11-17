@@ -1,6 +1,6 @@
-<p>State: </p>
-<div> <%= @device.state %> </div>
-<%= link_to("Toggle state", { :controller => :devices, :action => :toggle_state }, :method => :post, :remote => true) %>
+<h1>Device State</h1>
+<div>Your device is <%= @device.state_as_word %> </div>
+<%= link_to(@device.switch_state_word, { :controller => :devices, :action => :toggle_state }, :method => :post, :remote => true) %>
 
 <h1>Readings</h1>
 
