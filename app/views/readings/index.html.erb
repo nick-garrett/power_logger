@@ -1,4 +1,4 @@
-Readings
+<h1>Readings</h1>
 
 <%= line_chart @readings.all.inject({}) {|res, v| res[0] ||= Hash.new; res[0][v[:created_at]] = v.usage; [res[0], v.usage] }[0] %>
 
