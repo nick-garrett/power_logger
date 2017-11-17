@@ -1,12 +1,9 @@
 class ReadingsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  
+
   def create
-    readings = params[:readings]
     device = Device.find(params[:device_id])
-    readings.each do |r|
-      Reading.create!(:device => device, :usage => r)
-    end
+    Reading.create!(:device => device, :usage => params[:usage])
     head :ok
   end
 
