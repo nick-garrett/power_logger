@@ -1,4 +1,6 @@
 Readings
+
+<%= line_chart @readings.usage.all.inject({}) {|res, v| res[0] ||= Hash.new; res[0][v[:created_at]] = res[1] ? v.usage - res[1] : v.usage; [res[0], v.usage] }[0] %>
 <% @readings.each do |reading| %>
   <p>Reading: <%= reading.usage %> kW</p>
 <% end %>
