@@ -4,10 +4,5 @@ Readings
 <% @readings.each do |reading| %>
   <p>Reading: <%= reading.usage %> kW</p>
 <% end %>
-<script>
-$(document).ready(function() {
-  setTimeout(function() {
-    window.location.reload();
-  }, 10000);
-});
-</script>
+
+<script language="javascript" type="text/javascript">setTimeout("location.reload();",20000);</script>
